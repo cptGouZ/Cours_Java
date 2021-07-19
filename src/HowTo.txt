@@ -1,0 +1,24 @@
+Importation de dépendances à partir de Maven :
+    Chercher la dépendance souhaitée sur le site de Maven
+    Une fois la bonne version trouvée, prendre les éléments suivant dans la partie texte de l'onglet Maven
+        groupId : javax.servlet.jsp.jstl
+        artifactId : jstl-api
+        version : 1.2
+    Construire une chaine de charactères groupId:artifactId:version
+        ex : javax.servlet.jsp.jstl:jstl-api:1.2
+    Ouvrir les settings du projet
+    Ajouter la librairie au Global Librairies à partir de maven
+    Inscrire dans le champ de rechercje la chaine précédemment construite
+    Cocher toute les cases sous le champ de recherche
+    Valider
+    Un pop-up apparaît pour ajouter la nouvelle librairie au projet.
+    Les librairies ajoutées sont ainsi prêtes à être ajoutées à tous les autres projets.
+
+Recharger un projet Web depuis Git
+    Fichier -> nouveau projet depuis version control
+    Choisir le projet présent sur git
+    Dans les paramètres du projet définir le SDK à utiliser et le Project level
+    Créer un nouveau Facets en projet WEB
+    Ajouter un Application Server Specifique sur Tomcat
+    Résoudre les problèmes par les Fix
+    Créer une configuration Tomcat avec l'artefact créé
