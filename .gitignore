@@ -1,0 +1,10 @@
+*.class
+.idea
+out
+*.jar
+*.classpath
+*.project
+*eclipse*
+/bin/*.properties
+/Synthese_Cours_Java.iml
+/META-INF
