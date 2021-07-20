@@ -48,15 +48,15 @@
             <p>Internationalisation</p>
             <%--Locale forcée--%>
             <fmt:setLocale value="en_US"/>
-            <fmt:setBundle basename="_50_Internalisation.i18n.index" var="usBundle"/>
+            <fmt:setBundle basename="_50_Internationalisation.i18n.index" var="usBundle"/>
             <fmt:setLocale value="en_EN"/>
-            <fmt:setBundle basename="_50_Internalisation.i18n.index" var="enBundle"/>
+            <fmt:setBundle basename="_50_Internationalisation.i18n.index" var="enBundle"/>
             <fmt:message bundle="${usBundle}" key="bonjour"/>
             <fmt:message bundle="${enBundle}" key="bonjour"/>
 
             <%--Méthode à utiliser--%>
             <fmt:setLocale value="${locale}"/>
-            <fmt:setBundle basename="_50_Internalisation.i18n.index" var="bundle"/>
+            <fmt:setBundle basename="_50_Internationalisation.i18n.index" var="bundle"/>
             <fmt:message bundle="${bundle}" key="bonjour"/>
 
             <p>Format Date

@@ -6,5 +6,5 @@ out
 *.project
 *eclipse*
 /bin/*.properties
-/Synthese_Cours_Java.iml
+*.iml
 /META-INF

@@ -10,11 +10,11 @@
         <welcome-file>index</welcome-file>
     </welcome-file-list>
     <error-page>
-        <error-code>403</error-code>
-        <location>/WEB-INF/ErrorsPages/403.html</location>
+        <location>/WEB-INF/ErrorsPages/error.html</location>
     </error-page>
     <error-page>
-        <location>/WEB-INF/ErrorsPages/error.html</location>
+        <error-code>403</error-code>
+        <location>/WEB-INF/ErrorsPages/403.html</location>
     </error-page>
     <error-page>
         <exception-type>java.lang.Exception</exception-type>
