@@ -3,3 +3,7 @@ jersey 2.34 = Tomcat 9
 
 org.glassfish.jersey.containers:jersey-container-servlet:2.34
 org.glassfish.jersey.inject:jersey-hk2:2.34
+
+Pour récupérer des éléments en JSON, les getters/setters sont nécessaires ainsi que la Sérialisation
+@JsonSerialize
+@Data

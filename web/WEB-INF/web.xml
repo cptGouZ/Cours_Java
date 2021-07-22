@@ -9,7 +9,7 @@
     <welcome-file-list>
         <welcome-file>index</welcome-file>
     </welcome-file-list>
-    <error-page>
+<!--    <error-page>
         <location>/WEB-INF/ErrorsPages/error.html</location>
     </error-page>
     <error-page>
@@ -19,5 +19,5 @@
     <error-page>
         <exception-type>java.lang.Exception</exception-type>
         <location>/WEB-INF/ErrorsPages/exception.html</location>
-    </error-page>
+    </error-page>-->
 </web-app>
