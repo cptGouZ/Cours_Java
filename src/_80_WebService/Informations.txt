@@ -1,0 +1,5 @@
+jersey 3.0.2 = Tomcat 10
+jersey 2.34 = Tomcat 9
+
+org.glassfish.jersey.containers:jersey-container-servlet:2.34
+org.glassfish.jersey.inject:jersey-hk2:2.34
