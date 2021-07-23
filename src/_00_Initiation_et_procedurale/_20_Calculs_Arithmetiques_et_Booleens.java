@@ -2,6 +2,7 @@ package _00_Initiation_et_procedurale;
 
 public class _20_Calculs_Arithmetiques_et_Booleens {
 	public static void main(String[] args) {
+		System.out.println("toto");
 	}
 	public static void Maths() {
 		/* La division de deux entier retourne la partie entière de la division quelque soit la variable de retour
