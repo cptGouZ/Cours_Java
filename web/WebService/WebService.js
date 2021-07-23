@@ -17,9 +17,9 @@ function appuiBouton() {
         url: "http://localhost:8080/Cours_Java_Web_exploded/api/test",
         // The key needs to match your method's input parameter (case-sensitive).
         data: JSON.stringify(monBean),
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        success: function(data){alert("ok");},
+        dataType: 'json',
+        contentType: 'application/json',
+        success: function(data){alert(data);},
         error: function(errMsg) {
             alert("fail");
         }

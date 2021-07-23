@@ -1,24 +1,34 @@
 package _80_WebService;
 
-import com.sun.xml.internal.ws.client.sei.ResponseBuilder;
-
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 
 @Path("/test")
 public class Api {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Bean test(){
-        System.out.println("tata");
         return new Bean();
     }
 
     @POST
-    @Path("/{param}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public void post(@PathParam("param") String json) {
-        System.out.println(json);
+    public Response post(LinkedHashMap<String, Object> json) {
+
+        Response.ResponseBuilder response = Response.status(Response.Status.NO_CONTENT); //PUT defaults to no content
+
+        for (Map.Entry<String, Object> entry : json.entrySet()) {
+            String key = entry.getKey();
+            Object value = entry.getValue();
+            System.out.println(key + value);
+            if(key.equalsIgnoreCase("action")) {
+                response.entity("{\"status\":\"ok\"}");
+            }
+        }
+        return response.build();
     }
 }
