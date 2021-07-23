@@ -19,9 +19,9 @@ function appuiBouton() {
         data: JSON.stringify(monBean),
         dataType: 'json',
         contentType: 'application/json',
-        success: function(data){alert(data);},
+        success: function(data){console.log("ok");},
         error: function(errMsg) {
-            alert("fail");
+            console.log("fail");
         }
     });
 }
