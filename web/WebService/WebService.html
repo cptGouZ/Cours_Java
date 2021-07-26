@@ -12,7 +12,13 @@
             <input type="button" id="btn" value="coucou">
         </div>
         <div>
-
+            Post BEAN
+            <form action="http://localhost:8080/Cours_Java_Web_exploded/webservice/medias/postBean" method="post">
+                <input type="text" name="id" value="8">
+                <input type="text" name="prenom" value="Marcel">
+                <!--<input type="text" name="date" value="3921-03-04T00:00:00+01:00">-->
+                <input type="submit" value="Upload Bean" />
+            </form>
         </div>
         <div>
             Post MULTIPART mixed TEXT et CHECKBOX via Html

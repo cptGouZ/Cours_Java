@@ -42,6 +42,11 @@ public class Medias {
         return Response.ok(file).build();
     }
 
+    @POST @Path("/postBean")
+    public void postBean(@BeanParam Bean bean){
+        System.out.println(bean.getPrenom());
+    }
+
     @POST @Path("/postJson")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -64,7 +69,7 @@ public class Medias {
                             @FormDataParam("checkBox") boolean checkBoxValue,
                             @FormDataParam("file") InputStream fis,
                             @FormDataParam("file") FormDataContentDisposition fileMetaData) throws Exception {
-        String UPLOAD_PATH = "C:\\Users\\Julien\\Pictures\\";
+        String UPLOAD_PATH = "D:\\";
         try
         {
             int read = 0;
