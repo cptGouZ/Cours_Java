@@ -39,6 +39,7 @@ public class Parametres {
         return parametre;
     }
 
+    //http://localhost:8080/Cours_Java_Web_exploded/webservice/parametres/contextParam
     @GET @Path("/contextParam")
     public String getContextParam(@Context UriInfo uriInfo,
                                     @Context HttpHeaders httpHeaders,
