@@ -1,21 +1,13 @@
+//http://localhost:8080/Cours_Java_Web_exploded/WebService/Produces.html
 package _80_WebService;
 
-import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
-import org.glassfish.jersey.media.multipart.FormDataParam;
-
-import javax.validation.constraints.NotEmpty;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import java.io.*;
-import java.util.Date;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.SortedSet;
 
-@Path("/medias")
-public class GetMedias {
+@Path("/produce")
+public class Produce {
     //Retour de texte
     @GET @Path("/getText")
     @Produces(MediaType.TEXT_PLAIN)

@@ -12,9 +12,6 @@ package _80_WebService;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
-import java.util.Date;
-import java.util.LinkedHashMap;
-import java.util.Map;
 
 @Path("/test/{userId: \\w{5,10}}")
 public class Demo {

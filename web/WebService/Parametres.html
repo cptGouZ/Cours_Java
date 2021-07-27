@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Voir le fichier _80_WebService/Parametres.java pour faire le lien</h1>
+    <a href="http://localhost:8080/Cours_Java_Web_exploded/webservice/parametres/queryparam?queryParamKey=queryParamValue">Paramètre clé valeur dans URL</a><br>
+    <a href="http://localhost:8080/Cours_Java_Web_exploded/webservice/parametres/pathparam/pathParamValue">Paramètre dans l'URL</a><br>
+    <a href="http://localhost:8080/Cours_Java_Web_exploded/webservice/parametres/cookieParam">Récupération de cookie</a><br>
+    <a href="http://localhost:8080/Cours_Java_Web_exploded/webservice/parametres/headerParam">Récupération d'infos sur le header</a><br>
+    <a href="http://localhost:8080/Cours_Java_Web_exploded/webservice/parametres/contextParam">Récupération d'infos sur les contextes'</a><br>
+    <form method="POST" action="http://localhost:8080/Cours_Java_Web_exploded/webservice/parametres/formParam">
+          <input type="text" name="formParamKey" value="formParamValue"/>
+          <button>Envoi de paramètres par formulaire</button>
+    </form>
+    <form method="POST" action="http://localhost:8080/Cours_Java_Web_exploded/webservice/parametres/beanParam">
+          <input type="text" name="id" value="89"/>
+          <input type="text" name="prenom" value="Jean Roger"/>
+          <button>Envoi d'un bean par formulaire</button>
+    </form>
+    <form action="http://localhost:8080/Cours_Java_Web_exploded/webservice/medias/addFile" method="post" enctype="multipart/form-data">
+            <p>Select a file : <input type="file" name="file" size="45" accept=".pdf" /></p>
+            <input type="text" name="userName" />
+            <input type="checkbox" name="checkBox" />
+            <button>Envoie type multipart</button>
+    </form>
+</body>
+</html>

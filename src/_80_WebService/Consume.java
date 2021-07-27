@@ -12,11 +12,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Path("/medias")
-public class PostMedias {
-    @POST @Path("/postBean")
-    public void postBean(@BeanParam Bean bean){
-        System.out.println(bean.getPrenom());
-    }
+public class Consume {
+
 
     @POST @Path("/postJson")
     @Consumes(MediaType.APPLICATION_JSON)
