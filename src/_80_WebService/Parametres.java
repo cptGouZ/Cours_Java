@@ -52,7 +52,8 @@ public class Parametres {
                                     @Context HttpServletRequest httpServletRequest,
                                     @Context HttpServletResponse httpServletResponse,
                                     @Context ServletContext servletContext,
-                                    @Context ServletConfig servletConfig){
+                                    @Context ServletConfig servletConfig,
+                                    @Context MediaType mediaType){
         return "beaucoup d'infos possibles";
     }
 

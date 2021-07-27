@@ -24,21 +24,4 @@ public class Demo {
     public String mod(@PathParam("nom") String username){
         return username + userId;
     }
-
-    @Path("/uriInfo")
-    @GET
-    @Produces(MediaType.APPLICATION_XML)
-    public String uriInfo(@Context UriInfo uriInfo){
-        return uriInfo.toString();
-    }
-
-    @Path("/headers")
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String headers(@Context HttpHeaders hh,
-                          @Context MediaType mt){
-        return hh.toString();
-    }
-
-
 }
