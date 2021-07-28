@@ -13,15 +13,10 @@ package _80_WebService;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 
-@Path("/test/{userId: \\w{5,10}}")
+@Path("/test/{userId}")
 public class Demo {
     @DefaultValue("158")
     @QueryParam("userId")
     private int userId;
 
-    @Path("/mod/{nom: \\w{3,7}}")
-    @GET
-    public String mod(@PathParam("nom") String username){
-        return username + userId;
-    }
 }

@@ -14,13 +14,15 @@ import javax.ws.rs.ext.Providers;
 @Path("/parametres")
 public class Parametres {
     //http://localhost:8080/Cours_Java_Web_exploded/webservice/parametres/queryparam?queryParamKey=queryParamValue
-    @GET @Path("/queryparam")
+    @GET @Path("/queryParam")
     public String getQueryParam (@QueryParam("queryParamKey") String parametre){
         return parametre;
     }
 
     //http://localhost:8080/Cours_Java_Web_exploded/webservice/parametres/pathparam/pathParamValue
-    @GET @Path("/pathparam/{pathParamKey}")
+    //Ce type de paramètre peut également être inclus dans le @Path de la classe
+    //Il est possible d'ajouter une expression régulière après le nom deu paramètre pour en faire la vérification {param: \w{5,10}}
+    @GET @Path("/pathParam/{pathParamKey}")
     public String getPathParam (@PathParam("pathParamKey") String parametre){
         return parametre;
     }
@@ -59,7 +61,7 @@ public class Parametres {
 
     //http://localhost:8080/Cours_Java_Web_exploded/webservice/parametres/formParam
     @POST @Path("/formParam")
-    public String formParam(@FormParam("formParamKey") String parametre){
+    public String formParam(@FormParam("formInputName") String parametre){
         return parametre;
     }
 
@@ -67,5 +69,19 @@ public class Parametres {
     @POST @Path("/beanParam")
     public String postBean(@BeanParam Bean bean){
         return bean.getPrenom() + bean.getId();
+    }
+
+
+    //Il est également possible de définir des variables de classe qui proviennent des paramètres de la requête avec une valeur par défaut
+    @DefaultValue("valeurDeParametreParDefaut")
+    @QueryParam("queryParamClass")
+    private String queryParamClass;
+    @DefaultValue("valeurDeCookieParDefaut")
+    @CookieParam("cookieParamClass")
+    private String cookieParamClass;
+    //http://localhost:8080/Cours_Java_Web_exploded/webservice/parametres?queryParamClass=queryValue
+    @GET
+    public String getParamClass(){
+        return queryParamClass + ' ' + cookieParamClass;
     }
 }
