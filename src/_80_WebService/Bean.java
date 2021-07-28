@@ -14,8 +14,8 @@ import java.util.Date;
 
 @JsonSerialize
 @Data
-@XmlRootElement(name="monBean")
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name="monBean") //Nom racine de l'élément XML au lieu du nom de la classe
+@XmlAccessorType(XmlAccessType.FIELD) //Méthode d'accès aux attributs lors de désérialisation d'un XML
 public class Bean {
     @FormParam("id")
     private int id = 9;

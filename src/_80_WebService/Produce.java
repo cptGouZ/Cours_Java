@@ -33,6 +33,4 @@ public class Produce {
         File file = new File("C:\\Users\\Julien\\Pictures\\2020-05-03 21_10_18-Elite - Dangerous (CLIENT).png");
         return Response.ok(file).build();
     }
-
-
 }

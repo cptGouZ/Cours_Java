@@ -13,11 +13,8 @@ import java.util.Map;
 
 @Path("/medias")
 public class Consume {
-
-
     @POST @Path("/postJson")
     @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
     public Response post(LinkedHashMap<String, Object> json) {
         for (Map.Entry<String, Object> entry : json.entrySet()) {
             String key = entry.getKey();
